@@ -10,8 +10,13 @@
 			<h1>Текст header</h1>
 			<nav>
 				<button href="vk.com">Кнопка</button>
-				<button class="green-button" href="google.com">Кнопка2</button>
+<<<<<<< HEAD
+				<button href="google.com">Кнопка2</button>
 				<button class="red" href="yandex.ru">Кнопка3</button>
+=======
+				<button class="green-button" href="google.com">Кнопка2</button>
+				<button href="yandex.ru">Кнопка3</button>
+>>>>>>> f535c5e (button 2 green)
 			</nav>
 		</header>
 		<section>
