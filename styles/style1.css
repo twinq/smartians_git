@@ -3,7 +3,13 @@ button {
 	background-color: navy;
 }
 
+
 button.red {
 	color: snow;
 	background: crimson;
 }
+
+.green-button {
+	background-color: green;
+}
+
