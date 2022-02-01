@@ -7,7 +7,7 @@ let mlKingsRoad = lgKingsRoad * 3;
 //indicater how many yd in 1 league
 let ydKingsRoad = lgKingsRoad * 5280; 
 
-//rounds the value to the second decimal place
+//rounds the value to the second decimal place0
 kmKingsRoad = Math.floor(kmKingsRoad * 100) / 100;
 mlKingsRoad = Math.floor(mlKingsRoad * 100) / 100;
 ydKingsRoad = Math.floor(ydKingsRoad * 100) / 100;
