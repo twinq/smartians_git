@@ -26,13 +26,14 @@ switch (buttonNumber) {
 }
 console.log(`Сегодня вечером я смотрю ${myChanel}`);
 
+if (buttonNumber === 4 || buttonNumber === 5) {
+    console.warn('Канал имеет возрастные ограничения!');
+} 
 
-if (myAge >= 18 && myChanel === 'Goodnight') {
-    console.log(`Канал имеет возрастные ограничения. Приятного просмотра`);
-} else if (myAge >= 18 && myChanel === 'Hot') {
-    console.log('Канал имеет возрастные ограничения. Приятного просмотра');
-} else if (myAge < 18 && myChanel === 'Goodnight') {
-    console.log('Канал имеет возрастные ограничения. Просмотр запрещён');
-} else if (myAge < 18 && myChanel ==='Hot') {
-    console.log ('Канал имеет возрастные ограничения. Просмотр запрещён');
+if (myAge < 18 && buttonNumber === 4) {
+    console.log('Просмотр запрещен.');
+} else if (myAge < 18 && buttonNumber === 5){
+    console.log('Просмотр запрещен.');
+} else {
+    console.log('Приятного просмотра');
 }
