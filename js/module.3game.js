@@ -1,6 +1,6 @@
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
-    if (userInput === 'камень' || userInput === 'ножницы' || userInput === 'бумага') {
+    if (userInput === 'камень' || userInput === 'ножницы' || userInput === 'бумага' || userInput === 'колодец') {
         return userInput;
     } else {
         console.warn('Ошибка!');
@@ -22,7 +22,7 @@ const getComputerChoice = () => {
 
 
 const determineWinner = (userChoice, computerChoice) => {
-    if ((userChoice === 'камень' && computerChoice === 'ножницы') 
+    if (userChoice === 'колодец' || (userChoice === 'камень' && computerChoice === 'ножницы') 
     || (userChoice === 'ножницы' && computerChoice === 'бумага')
     || (userChoice === 'бумага' && computerChoice === 'камень')) {
         return 'победа';
@@ -36,7 +36,7 @@ const determineWinner = (userChoice, computerChoice) => {
 }
 
 const playGame = () => {
-    let userChoice = getUserChoice('Камень');
+    let userChoice = getUserChoice('бумага');
     let computerChoice = getComputerChoice();
     determineWinner(userChoice, computerChoice);
     console.log(determineWinner(userChoice, computerChoice))
