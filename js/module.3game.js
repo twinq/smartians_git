@@ -22,16 +22,15 @@ const getComputerChoice = () => {
 
 
 const determineWinner = (userChoice, computerChoice) => {
-    if (userChoice === 'колодец' || (userChoice === 'камень' && computerChoice === 'ножницы') 
+    if (userChoice === 'колодец' 
+    || (userChoice === 'камень' && computerChoice === 'ножницы') 
     || (userChoice === 'ножницы' && computerChoice === 'бумага')
     || (userChoice === 'бумага' && computerChoice === 'камень')) {
         return 'победа';
-    } else if ((userChoice === 'камень' && computerChoice === 'бумага') 
-    || (userChoice === 'ножницы' && computerChoice === 'камень')
-    || (userChoice === 'бумага' && computerChoice === 'ножницы')) {
-        return 'поражение';
-    } else {
+    } else if (userChoice === computerChoice) {
         return 'ничья';
+    } else {
+        return 'поражение';
     }
 }
 
