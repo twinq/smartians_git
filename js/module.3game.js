@@ -22,15 +22,25 @@ const getComputerChoice = () => {
 
 
 const determineWinner = (userChoice, computerChoice) => {
-    if (userChoice === 'колодец' 
-    || (userChoice === 'камень' && computerChoice === 'ножницы') 
-    || (userChoice === 'ножницы' && computerChoice === 'бумага')
-    || (userChoice === 'бумага' && computerChoice === 'камень')) {
-        return 'победа';
-    } else if (userChoice === computerChoice) {
-        return 'ничья';
-    } else {
-        return 'поражение';
+    let comb = userChoice + computerChoice
+    
+    switch (comb) {
+        case 'каменькамень':
+        case 'ножницыножницы':
+        case 'бумагабумага':
+            return 'ничья';
+        
+        case 'каменьножницы':
+        case 'ножницыбумага':
+        case 'бумагакамень':
+            return 'победа';
+            
+        case 'каменьбумага':
+        case 'ножницыкамень':
+        case 'бумаганожницы':
+            return 'поражение';
+        
+            
     }
 }
 
