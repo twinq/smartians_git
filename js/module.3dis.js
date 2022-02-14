@@ -4,19 +4,11 @@ const throwDies = () => {
 }
 
 const getUser1 = () => {
-    throwDies();
-    throwDies();
-    throwDies();
-    let cost1 = throwDies() + throwDies() + throwDies();
-    return cost1;
+    return throwDies() + throwDies() + throwDies();
 }
 
 const getUser2 = () => {
-    throwDies();
-    throwDies();
-    throwDies();
-    let cost2 = throwDies() + throwDies() + throwDies();
-    return cost2;
+    return throwDies() + throwDies() + throwDies();
 }
 
 const dispute = () => {
