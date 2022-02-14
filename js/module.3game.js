@@ -1,10 +1,14 @@
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
-    if (userInput === 'камень' || userInput === 'ножницы' || userInput === 'бумага' || userInput === 'колодец') {
-        return userInput;
-    } else {
-        console.warn('Ошибка!');
+    switch (userInput) {
+        case 'камень':
+        case 'ножницы':
+        case 'бумага':
+        case 'колодец':
+            return userInput;
     }
+    console.warn('Ошибка!');
+    
 }
 
 const getComputerChoice = () => {
@@ -22,26 +26,15 @@ const getComputerChoice = () => {
 
 
 const determineWinner = (userChoice, computerChoice) => {
-    let comb = userChoice + computerChoice
+    if (userChoice === computerChoice) return 'Ничья';
     
-    switch (comb) {
-        case 'каменькамень':
-        case 'ножницыножницы':
-        case 'бумагабумага':
-            return 'ничья';
-        
-        case 'каменьножницы':
-        case 'ножницыбумага':
-        case 'бумагакамень':
-            return 'победа';
-            
-        case 'каменьбумага':
-        case 'ножницыкамень':
-        case 'бумаганожницы':
-            return 'поражение';
-        
-            
-    }
+    const victoryWithRock = userChoice === 'камень' && computerChoice === 'ножницы';
+    const victoryWithScissors = userChoice === 'ножницы' && computerChoice === 'бумага';
+    const victoryWithPaper = userChoice === 'бумага' && computerChoice === 'камень';
+    
+    if (victoryWithRock || victoryWithScissors || victoryWithPaper) return 'победа';
+    
+    return 'поражение';
 }
 
 const playGame = () => {
@@ -50,4 +43,5 @@ const playGame = () => {
     determineWinner(userChoice, computerChoice);
     console.log(determineWinner(userChoice, computerChoice))
 }
+
 playGame();
