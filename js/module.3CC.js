@@ -19,16 +19,8 @@ const getDailyCalories = day => {
 }
 
 const getActualCaloriesQty = () => {
-    getDailyCalories('Понедельник');
-    getDailyCalories('вторник');
-    getDailyCalories('среда');
-    getDailyCalories('четверг');
-    getDailyCalories('пятница');
-    getDailyCalories('суббота');
-    getDailyCalories('воскресенье');
-    let sum = getDailyCalories('Понедельник') + getDailyCalories('вторник') + getDailyCalories('среда') +
+    return getDailyCalories('Понедельник') + getDailyCalories('вторник') + getDailyCalories('среда') +
     getDailyCalories('четверг') + getDailyCalories('пятница') + getDailyCalories('суббота') + getDailyCalories('воскресенье');
-    return sum;
 }
 
 
