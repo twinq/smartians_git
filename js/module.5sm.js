@@ -34,6 +34,6 @@ let secretMessage = [
    secretMessage.unshift('Предполагаю');
 
    console.log(secretMessage.indexOf('нам'));
-   secretMessage.splice(4, 6, '2030');
+   secretMessage.splice(4, 3, '2030');
    
    console.log(secretMessage.join(' '));
